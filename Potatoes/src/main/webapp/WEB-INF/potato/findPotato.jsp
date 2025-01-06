@@ -15,7 +15,7 @@
 		<p>
 			<strong>Showing ${potatoes.size()} Results</strong>
 		</p>
-		<button type="submit" class="submit-button" onclick="window.location.href='/home.do'">Return
+		<button type="submit" class="submit-button" onclick="window.location.href='home.do'">Return
 			To Home</button>
 		<hr>
 	</c:if>

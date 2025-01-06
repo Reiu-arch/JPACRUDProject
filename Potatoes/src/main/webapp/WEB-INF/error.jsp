@@ -9,7 +9,7 @@
 <h1>You Have Come to An Error</h1>
 <body>
 <div>Womp Womp</div>
-<button class="return-button" onclick="window.location.href='/home.do'">
+<button class="return-button" onclick="window.location.href='home.do'">
                 Return To Home
             </button>
 </body>

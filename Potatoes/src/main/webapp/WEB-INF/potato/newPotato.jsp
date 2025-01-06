@@ -41,7 +41,7 @@
 	<input class="submit-button" type="submit" value="Submit" />
 </form>
 <br>
-<button type="submit" class="submit-button" onclick="window.location.href='/home.do'">Return
+<button type="submit" class="submit-button" onclick="window.location.href='home.do'">Return
 		To Home</button>
 </body>
 </html>

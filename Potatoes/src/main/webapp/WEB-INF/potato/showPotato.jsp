@@ -44,7 +44,7 @@
             </form>
 
             
-            <button class="return-button" onclick="window.location.href='/home.do'">
+            <button class="return-button" onclick="window.location.href='home.do'">
                 Return To Home
             </button>
         </div>

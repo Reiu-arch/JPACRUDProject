@@ -24,7 +24,6 @@ public class PotatoesDAOJpaImpl implements PotatoesDAO{
 	@Override
 	public List<PotatoType> findall() {
 		String jpql = "SELECT p FROM PotatoType p";
-		
 		return em.createQuery(jpql, PotatoType.class).getResultList();
 	}
 
@@ -36,24 +35,22 @@ public class PotatoesDAOJpaImpl implements PotatoesDAO{
 	@Transactional
 	@Override
 	public PotatoType create(PotatoType potato) {
-		
 		em.persist(potato);
 		em.flush();
-		
 		return potato;
 	}
 	
 	@Transactional
 	@Override
 	public PotatoType update(int potatoId, PotatoType updatingPotato) {
-		
 		PotatoType managedPotato = em.find(PotatoType.class, potatoId);
 		managedPotato.setExteriorColor(updatingPotato.getExteriorColor());
 		managedPotato.setInteriorColor(updatingPotato.getInteriorColor());
+		managedPotato.setBestUses(updatingPotato.getBestUses());
+		managedPotato.setDescription(updatingPotato.getDescription());
 		managedPotato.setName(updatingPotato.getName());
 		em.persist(managedPotato);
 		em.flush();
-		
 		return updatingPotato;
 	}
 
@@ -61,8 +58,6 @@ public class PotatoesDAOJpaImpl implements PotatoesDAO{
 	@Transactional(rollbackOn=Exception.class)
 	@Override
 	public boolean deleteById(int id) {
-		
-
 		try {
 			PotatoType dyingPotato = em.find(PotatoType.class, id);
 			em.remove(dyingPotato);
@@ -85,7 +80,6 @@ public class PotatoesDAOJpaImpl implements PotatoesDAO{
 	    if (keyword == null || keyword.trim().isEmpty()) {
 	        return new ArrayList<>(); // This will return an empty array list, but i also put a check on the controller. Works fine but still relatively unsure
 	    }
-
 	    String jpql = "SELECT p FROM PotatoType p WHERE p.name LIKE :keyword";
 	    return em.createQuery(jpql, PotatoType.class)
 	             .setParameter("keyword", "%" + keyword.trim() + "%")
