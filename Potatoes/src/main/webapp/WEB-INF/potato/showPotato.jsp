@@ -16,10 +16,14 @@
         
         <div class="potato-details">
             <h3 class="potato-name">${potato.name}</h3>
+            <hr>
             <ul class="potato-info">
                 <li><strong>Interior Color:</strong> ${potato.interiorColor}</li>
+            <hr>
                 <li><strong>Exterior Color:</strong> ${potato.exteriorColor}</li>
+            <hr>
                 <li><strong>Best Uses:</strong> ${potato.bestUses}</li>
+            <hr>
                 <li><strong>Description:</strong> ${potato.description}</li>
             </ul>
         </div>

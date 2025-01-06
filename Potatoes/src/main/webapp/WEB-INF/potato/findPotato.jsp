@@ -39,7 +39,7 @@
 			<c:forEach var="potato" items="${potatoes}">
     <tr>
         <td>${potato.id}</td>
-        <td><a href="<c:url value='/getPotato.do'><c:param name='id' value='${potato.id}'/></c:url>">
+        <td><a href="<c:url value='getPotato.do'><c:param name='potatoId' value='${potato.id}'/></c:url>">
                 ${potato.name}</a></td>
         <td>${potato.interiorColor}</td>
         <td>${potato.exteriorColor}</td>

@@ -45,7 +45,7 @@ class PotatoTypeTest {
 	@Test
 	void test_potatoType_for_entity_mapping() {
 		assertNotNull(potato);
-		assertEquals("russet",potato.getName());
+		assertEquals("Russet",potato.getName());
 	}
 
 }

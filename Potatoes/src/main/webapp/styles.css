@@ -1,12 +1,10 @@
 @charset "UTF-8";
-/* General Reset */
 body, h1, form {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
@@ -16,7 +14,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling */
 h1 {
     text-align: center;
     color: #4CAF50;
@@ -24,7 +21,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Form Container */
 form {
     background: #fff;
     padding: 15px;
@@ -34,11 +30,14 @@ form {
     max-width: 500px;
 }
 
-/* Potato Details Styling */
 div {
+    overflow: auto;
+    resize: both;
     background: #fff;
     padding: 20px;
     margin: 20px auto;
+    width: auto;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -58,7 +57,6 @@ div li {
     margin-bottom: 8px;
 }
 
-/* Potato Info List */
 .potato-info {
     list-style: none;
     padding: 0;
@@ -68,7 +66,6 @@ div li {
     margin: 5px 0;
 }
 
-/* Form Labels */
 form label {
     display: block;
     margin-bottom: 8px;
@@ -76,9 +73,8 @@ form label {
     color: #4CAF50;
 }
 
-/* Input Fields */
 form input[type="text"], form input[type="submit"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -86,7 +82,6 @@ form input[type="text"], form input[type="submit"] {
     font-size: 1rem;
 }
 
-/* Buttons */
 form input[type="submit"], .submit-button, .edit-button, .delete-button {
     background-color: #4CAF50;
     color: #fff;
@@ -105,7 +100,6 @@ form input[type="submit"]:hover, .submit-button:hover, .edit-button:hover, .dele
     background-color: #45a049;
 }
 
-/* Delete Button */
 .delete-button {
     background-color: #f44336;
 }
@@ -114,7 +108,6 @@ form input[type="submit"]:hover, .submit-button:hover, .edit-button:hover, .dele
     background-color: #e53935;
 }
 
-/* Return Button Styling */
 button.submit-button {
     display: block;
     margin: 20px auto;
@@ -132,7 +125,6 @@ button.submit-button:hover {
     background-color: #45a049;
 }
 
-/* Return to Home Button */
 .return-button {
     background-color: #2196F3;
     color: #fff;
@@ -148,13 +140,11 @@ button.submit-button:hover {
     background-color: #1976D2;
 }
 
-/* Form Alignment */
 form .form-label {
     font-size: 1.2rem;
     color: #555;
 }
 
-/* Global Layout */
 .submit-button {
     width: auto;
     display: inline-block;
@@ -172,9 +162,94 @@ form .form-label {
     background-color: #45a049;
 }
 
-/* Actions Section */
 .actions {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+table {
+    width: 150%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+tr:hover td {
+    background-color: #e0f7fa;
+}
+
+.submit-button,
+.edit-button,
+.delete-button {
+    padding: 8px 16px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.submit-button {
+    background-color: #2196F3;
+}
+
+.submit-button:hover {
+    background-color: #0b7dda;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.submit-button {
+    background-color: #2196F3;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0b7dda;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }

@@ -37,6 +37,10 @@ public class PotatoController {
 	public String goNewPotato(Model model) {
 		return "potato/newPotato";
 	}
+	@GetMapping(path = "/error")
+	public String error(Model model) {
+		return "error";
+	}
 	
 	@PostMapping(path = "newPotato.do")
 	public String createNewPotato(PotatoType potato, Model model) {
